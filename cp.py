@@ -18,3 +18,5 @@ if __name__ == '__main__':
             shutil.copyfile(from_dir, args.to_dir)
         except IsADirectoryError:
             parser.error("Is a directory: {}".format(from_dir))
+        except FileNotFoundError as e:
+            parser.error("{} does not exist".format(e.filename))

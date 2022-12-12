@@ -11,7 +11,11 @@ if __name__ == '__main__':
     parser.add_argument('stdin', nargs='?', type=argparse.FileType('r'), default=sys.stdin)
     (args, _) = parser.parse_known_args()
 
-    pattern = re.compile(args.pattern)
+    try:
+        pattern = re.compile(args.pattern)
+    except:
+        parser.error('Invalid pattern')
+
     if args.file is None:
         if not sys.stdin.isatty():
             content = parser.parse_args().stdin.read().splitlines()

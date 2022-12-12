@@ -13,4 +13,7 @@ if __name__ == '__main__':
     if args.p:
         os.makedirs(path)
     else:
-        os.mkdir(path)
+        try:
+            os.mkdir(path)
+        except FileNotFoundError as e:
+            parser.error('{} does not exist'.format(e.filename))
