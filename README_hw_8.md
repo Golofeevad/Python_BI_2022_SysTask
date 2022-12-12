@@ -4,7 +4,7 @@
 
 This task is made by contributors: Yelizaveta Gafarova, Dasha Golofeeva, Anastasia Lianguzova.
 
-### There are following utilities in this repository:
+### There are following utilities in the repository:
 
 - `ls` - lists computer files and directories;
 
