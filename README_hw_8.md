@@ -1,34 +1,34 @@
 # HW 8
 
-*_Moduls `sys` `os` task_*
+*_Modules `sys`, `os` task_*
 
 This task is made by contributors: Yelizaveta Gafarova, Dasha Golofeeva, Anastasia Lianguzova.
 
-### There are following utilities on this repository:
+### There are following utilities in this repository:
 
-`chmod +x {file}` should be runned in terminal to make files executable.
+- `ls` - lists computer files and directories;
 
-- `ls`
+- `sort`- prints the lines of its input in sorted order;
 
-- `sort`
+- `wc` - prints newline, word and byte counts for the files;
 
-- `wc`
+- `rm` - removes the input file;
 
-- `rm`
+- `cat` - reads files sequentially, printing them in output;
 
-- `cat`
+- `cp` - copies files and directories;
 
-- `cp`
+- `grep` - searching text data sets for lines matching an input regular expression;
 
-- `grep`
+- `mkdir` - creates a new directory;
 
-- `mkdir`
+- `mv` - moves existing file/directory to a new location;
 
-- `mv`
+- `tail` - prints the last few number of lines of a given file (10 lines by default);
 
-- `tail`
+- `uniq` - filters an input file removing duplicated lines from it;
 
-- `uniq`
+The individual scripts could be downloaded from the repo, after that`chmod +x {file}` should be runned in terminal to make files executable. The repo also contains `install.py` script. Running it enables to run the scripts without providing their paths.
 
 
 
