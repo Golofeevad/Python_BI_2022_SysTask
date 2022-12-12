@@ -6,6 +6,8 @@ This task is made by contributors: Yelizaveta Gafarova, Dasha Golofeeva, Anastas
 
 ### There are following utilities on this repository:
 
+`chmod +x {file}` should be runned in terminal to make files executable.
+
 - `ls`
 
 - `sort`
