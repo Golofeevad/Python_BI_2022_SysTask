@@ -28,7 +28,7 @@ This task is made by contributors: Yelizaveta Gafarova, Dasha Golofeeva, Anastas
 
 - `uniq` - filters an input file removing duplicated lines from it;
 
-The individual scripts could be downloaded from the repo, after that`chmod +x {file}` should be runned in terminal to make files executable. The repo also contains `install.py` script. Running it enables to run the scripts without providing their paths.
+The individual scripts could be downloaded from the repo, after that`chmod +x {file}` should be runned in terminal to make files executable. The repo also contains `install.py` script. Running it enables to run the scripts without providing their paths. Thus, to use above-mentioned utilities one should enter `*{path_to}/utility_name*.py` in a command line or, after using `install.py` script just `*utility_name*.py`. 
 
 
 
