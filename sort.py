@@ -25,11 +25,11 @@ if __name__ == '__main__':
         if os.path.exists(args.path):
             with open(args.path, 'r') as f:
                 for line in f:
-                    text.append(line)
+                    text.append(line.rstrip('\n'))
         else:
             raise PathDoesntExist
 
     text.sort()
 
     for line in text:
-        print(line, end='')
+        print(line, end='\n')
