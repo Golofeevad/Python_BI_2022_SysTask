@@ -25,9 +25,9 @@ def file_path(path):
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-c', '--bytes', action='store_true')
 parser.add_argument('-l', '--lines', action='store_true')
 parser.add_argument('-w', '--words', action='store_true')
+parser.add_argument('-c', '--bytes', action='store_true')
 parser.add_argument('path', nargs='?', default=sys.stdin, type=argparse.FileType('r'))
 args = parser.parse_args()
 
