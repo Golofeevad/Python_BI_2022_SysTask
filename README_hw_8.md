@@ -160,6 +160,41 @@ Using `rm.py` without options remove a particular file.
 >  
 >  *or i will go to work in pyaterochka*
 
+7. `tail.py <file>` will print the last lines of a file. It has one option: -n for a nuber of lines needed. You can also use the utility without its option, the default number of lines is 10.
+
+> `$ printf 'Hi\nthis\nis\nanother\ntest\nfile\nwith\nten\ndamn\nlines' >> test1.txt`
+> 
+> `$ tail.py test1.txt`
+> 
+>  *Hi*
+>  
+>  *this*
+>  
+>  *is*
+>  
+>  *another*
+>  
+>  *test*
+>  
+>  *file*
+>  
+>  *with*
+>  
+>  *ten*
+>  
+>  *damn*
+>  
+>  *lines*
+>
+>`$ tail.py -n 2 test1.txt`
+>
+>  *damn*
+>  
+>  *lines*
+
+  
+
+
 
 
 
