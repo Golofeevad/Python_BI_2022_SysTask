@@ -40,19 +40,19 @@ Thus, to use above-mentioned utilities one should enter `{path_to}/utility_name.
 
 `ls.py` shows files located in a given directory (a working directory by default). 
 
-- `ls.py`
+> - `ls.py`
 
-*cat.py cp.py grep.py install.py ls.py mkdir.py mv.py rm.py sort.py tail.py uniq.py wc.py*
+> *cat.py cp.py grep.py install.py ls.py mkdir.py mv.py rm.py sort.py tail.py uniq.py wc.py*
 
-- `ls.py ../../`
+> - `ls.py ../../`
 
-*Untitled.ipynb data hw_fun hw_sys re_hw*
+> *Untitled.ipynb data hw_fun hw_sys re_hw*
 
 -a option enables to find hidden files (their name starts with a dot)
 
-- `ls.py ../../ -a`
+> - `ls.py ../../ -a`
 
-*.idea .ipynb_checkpoints Untitled.ipynb data hw_fun hw_sys re_hw*
+> *.idea .ipynb_checkpoints Untitled.ipynb data hw_fun hw_sys re_hw*
 
 
 
