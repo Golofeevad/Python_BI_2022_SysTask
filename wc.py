@@ -10,7 +10,7 @@ def bytes_count(file):
 
 
 def lines_count(file):
-    return file.count('\n') + 1
+    return file.count('\n')
 
 
 def word_count(file):
