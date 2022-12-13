@@ -5,43 +5,49 @@ import os
 import argparse
 
 
-def bytes_count(path):
-    return os.path.getsize(path)
+def bytes_count(file):
+    return sys.getsizeof(file) - sys.getsizeof('')
 
 
 def lines_count(file):
-    return len(file.readlines())
+    return file.count('\n') + 1
 
 
 def word_count(file):
-    return len(file.read().split())
+    return len(file.split())
 
 
 def file_path(path):
-    if os.path.isfile(path):
+    if os.path.exists(path.name):
         return path
     else:
-        raise argparse.ArgumentTypeError(f'readable_file:{path} is not a valid path')
+        raise argparse.ArgumentTypeError(f'{path} is not a valid path')
 
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-c', '--bytes', action='store_true')
 parser.add_argument('-l', '--lines', action='store_true')
 parser.add_argument('-w', '--words', action='store_true')
-parser.add_argument('path', nargs='?', default=sys.stdin)
+parser.add_argument('path', nargs='?', default=sys.stdin, type=argparse.FileType('r'))
 args = parser.parse_args()
 
-def main(*args):
-    for arg in args:
-        path_to_file = file_path(arg.path)
-        if arg.bytes:
-            print(bytes_count(path_to_file))
-        with open(path_to_file) as f:
-            if arg.lines:
-                print(lines_count(f))
-            if arg.words:
-                print(word_count(f))
+
+functions = {'bytes': bytes_count, 'lines': lines_count, 'words': word_count}
+
+
+def only_path(args):
+    del args['path']
+    if any(args.values()):
+        return [arg for arg, req in args.items() if req]
+    else:
+        return list(args.keys())
 
 
 if __name__ == '__main__':
-    main(args)
+    if file_path(args.path):
+        file = args.path.read()
+        arguments = only_path(vars(args))
+        count = []
+        for arg in arguments:
+            count.append(functions[arg](file))
+        print(' '.join(map(str, count)))
