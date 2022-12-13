@@ -5,12 +5,15 @@ import os.path
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('path')
+    parser.add_argument('paths', nargs='*')
     args = parser.parse_args()
 
-    path = args.path
-    if not os.path.exists(path):
-        parser.error('{} does not exist'.format(path))
+    for file in paths:
+        if not os.path.exists(file):
+            parser.error('{} does not exist'.format(file))
 
-    with open(args.path) as file:
-        print(file.read())
+    for file in paths:
+        with open(file) as f:
+            for line in f:
+                print(line.strip())
+        
