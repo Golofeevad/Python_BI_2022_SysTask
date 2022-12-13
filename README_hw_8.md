@@ -192,7 +192,24 @@ Using `rm.py` without options remove a particular file.
 >  
 >  *lines*
 
-  
+8. `mkdir.py` creates a directory of the given name in the current directory. Produces an error if parent directories do not exist.  With -p option makes it possible to create nested directories.
+
+> `$ mkdir.py new_dir` - will make new directory *new_dir*
+> 
+> `$ mkdir.py very_new_dir/new_dir` - will end up with an error as *very_new_dir* does not exist
+> 
+> `$ mkdir.py -p very_new_dir/new_dir` - will create *very_new_dir* and *new_dir* inside it
+
+
+8. `cp.py <from_file> <to_file>` strange one, makes copies
+
+> `$ cp.py -r <from_directory> <to_directory>`
+> `$ cp.py <from_file> <to_file>`
+> `$ cp.py <from_directory> <to_directory>` - produces error
+
+9. `mv.py <from> <to>` has no options, the utility is able to move files and directories.
+
+10. 
 
 
 
