@@ -32,7 +32,7 @@ parser.add_argument('path', nargs='?', default=sys.stdin, type=argparse.FileType
 args = parser.parse_args()
 
 
-functions = {'bytes': bytes_count, 'lines': lines_count, 'words': word_count}
+functions = {'lines': lines_count, 'words': word_count, 'bytes': bytes_count}
 
 
 def only_path(args):
