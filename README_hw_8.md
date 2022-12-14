@@ -192,25 +192,65 @@ Using `rm.py` without options remove a particular file.
 >  
 >  *lines*
 
-8. `mkdir.py` creates a directory of the given name in the current directory. Produces an error if parent directories do not exist.  With -p option makes it possible to create nested directories.
+8. `mkdir.py` creates a directory of the given name in the current directory. Produces an error if you print a path in which parent directories do not exist.  With -p option makes it possible to create nested directories.
 
 > `$ mkdir.py new_dir` - will make new directory *new_dir*
 > 
-> `$ mkdir.py very_new_dir/new_dir` - will end up with an error as *very_new_dir* does not exist
+> `$ mkdir.py very_new_dir/brand_new_dir` - will end up with an error as *very_new_dir* does not exist
+> 
+> `$ mkdir.py -p very_new_dir/brand_new_dir` - will create *very_new_dir* and *brand_new_dir* inside it
+
+8. `mv.py <smth> <to>` has no options, the utility is able to move files and directories.
+
+> `$ mv.py test1.txt new_dir` - will move  *test1.txt* into *new_dir*
+> 
+> `$ mv.py new_dir very_new_dir` - will move *new_dir* into *very_new_dir*
 > 
 > `$ mkdir.py -p very_new_dir/new_dir` - will create *very_new_dir* and *new_dir* inside it
 
+9. `cp.py <from> <to>` makes copies. It has -r option to copy directories.
 
-8. `cp.py <from_file> <to_file>` strange one, makes copies
+> `$ cp.py -r new_dir brand_new_dir` - transfers *new_dir* with a file inside into *brand_new_dir*, saves the original directory
+> 
+> `$ cp.py vacation.txt pyaterochka.txt`- reproduces lines from the first file in the second one
+> 
+> `$ cat.py pyaterochka.txt`
+> 
+>  *or i will go to work in pyaterochka*
+>  
+>  *i need a vacation*
+>  
+> `$ cp.py pyaterochka.txt very_new_dir` - copies *pyaterochka.txt* to *very_new_dir* folder
 
-> `$ cp.py -r <from_directory> <to_directory>`
-> `$ cp.py <from_file> <to_file>`
-> `$ cp.py <from_directory> <to_directory>` - produces error
+10. `uniq.py <file>` - merges repeated lines in file
 
-9. `mv.py <from> <to>` has no options, the utility is able to move files and directories.
-
-10. 
-
+> `$ printf 'Help me\nSomeone please come and help me\nNeed somebody to tell me\nPlease\nPlease\nWhat the hell is going on?' >> help.txt`
+> 
+> `$ cat.py help.txt`
+> 
+> *Help me*
+> 
+> *Someone please come and help me*
+> 
+> *Need somebody to tell me*
+> 
+> *Please*
+> 
+> *Please*
+> 
+> *What the hell is going on*
+> 
+> `$ uniq.py help.txt`
+> 
+> *Help me*
+> 
+> *Someone please come and help me*
+> 
+> *Need somebody to tell me*
+> 
+> *Please*
+> 
+> *What the hell is going on*
 
 
 
